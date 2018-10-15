@@ -2,8 +2,6 @@
 
 ## Step 1
 
-Added a simple triangle shape.
-
 ```js
 'use strict';
 
@@ -29,8 +27,6 @@ function draw() {
 ```
 
 ## Step 2
-
-Created the circle by using triangles.
 
 ```js
 'use strict';
@@ -69,8 +65,6 @@ function draw() {
 
 ## Step 3
 
-Changed the Saturation and Brightness of the circle by using the mouse.
-
 ```js
 'use strict';
 
@@ -108,8 +102,6 @@ function draw() {
 ```
 
 ## Step 4
-
-Added a function to save the canvas and change the amount of triangles in the circle.
 
 ```js
 'use strict';

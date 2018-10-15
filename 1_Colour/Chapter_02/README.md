@@ -2,8 +2,6 @@
 
 ## Step 1
 
-Setting the canvas and drawing a rectangle.
-
 ```js
 'use strict';
 
@@ -23,8 +21,6 @@ function draw() {
 ```
 
 ## Step 2
-
-Creating a grid that populates the canvas.
 
 ```js
 'use strict';
@@ -60,8 +56,6 @@ function draw() {
 
 ## Step 3
 
-Added colour spectrum to the canvas using the mouse.
-
 ```js
 'use strict';
 
@@ -92,8 +86,6 @@ function draw() {
 ```
 
 ## Step 4
-
-Added a function that saves the canvas as a png file.
 
 ```js
 'use strict';
