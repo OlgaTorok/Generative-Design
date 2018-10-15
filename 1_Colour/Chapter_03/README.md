@@ -50,10 +50,10 @@ function draw() {
     beginShape(TRIANGLE_FAN);
         vertex(width / 2, height / 2);
 
-        /** A for() loop is created to add a new vertex 
+        /** A for() loop is created to add a new vertex
              until the circle is completed */
         for(var angle = 0; angle <= 360; angle += increment) {
-            // Declare x and y coordinates of the new vertex 
+            // Declare x and y coordinates of the new vertex
             var vx = radius * cos(radians(angle)) + width / 2;
             var vy = radius * sin(radians(angle)) + height / 2;
             vertex(vx, vy);
@@ -77,7 +77,7 @@ function setup() {
 }
 
 function draw() {
-    /** Change the saturation and brightness 
+    /** Change the saturation and brightness
         with the width and height of the canvas */
     colorMode(HSB, 360, width, height);
     // The background brightness changes with the height
@@ -93,7 +93,7 @@ function draw() {
         var vx = radius * cos(radians(angle)) + width / 2;
         var vy = radius * sin(radians(angle)) + height / 2;
         vertex(vx, vy);
-        /**  The fill of the shape changes depending 
+        /**  The fill of the shape changes depending
              on the angle and the mouse position */
         fill(angle, mouseX, mouseY);
     }
@@ -133,7 +133,7 @@ function draw() {
     endShape();
 }
 
-/** The function saves the canvas as a png image if key S is pressed. 
+/** The function saves the canvas as a png image if key S is pressed.
      If the keys 1, 2, 3, 4 or 5 is pressed the number of triangles changes. */
 function keyPressed() {
     if (key == 's' || key == 'S') saveCanvas(gd.timestamp(), 'png');

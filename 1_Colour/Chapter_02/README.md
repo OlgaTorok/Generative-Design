@@ -69,7 +69,7 @@ function setup() {
 }
 
 function draw() {
-    /** The steps are going to be set to the mouse locations. 
+    /** The steps are going to be set to the mouse locations.
      * This is going to determine the resolution of the colours
      */
     stepX = mouseX + 2;
@@ -110,7 +110,7 @@ function draw() {
     }
 }
 
-/* This function will save a png image of the canvas 
+/* This function will save a png image of the canvas
 on your computer, when the S key is pressed */
 function keyPressed() {
     if (key == 's' || key == 'S') saveCanvas(gd.timestamp(), 'png');
