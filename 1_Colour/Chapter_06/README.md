@@ -230,7 +230,7 @@ function keyPressed() {
     // Sabe canvas as a png using the timstamp generative design method
     if (key == 's' || key == 'S') saveCanvas(gd.timestamp(), 'png');
     if (key == 'c' || key == 'C') {
-        // -- save an ase file (adobe swatch export) --
+        // Save the canvas as ase file
         var colors = [];
         for (var i = 0; i < hueValues.length; i++) {
             colors.push(color(hueValues[i], saturationValues[i], brightnessValues[i]));
