@@ -41,15 +41,7 @@ function draw() {
         var parts = [];
 
         for (var ii = 0; ii < partCount; ii++) {
-            if (random() < 0.075) {
-                var fragments = int(random(2, 20));
-                partCount += fragments;
-                for (var iii = 0; iii < fragments; iii++) {
-                    parts.push(random(2));
-                }
-            } else {
                 parts.push(random(2, 20));
-            }
         }
 
         var sumPartsTotal = 0;
@@ -58,17 +50,18 @@ function draw() {
         }
 
         var sumPartsNow = 0;
-        for (var ii = 0; ii < parts.length; ii++) {
-            sumPartsNow += parts[ii];
+        for (var j = 0; j < parts.length; j++) {
             var x = map(sumPartsNow, 0, sumPartsTotal, 0, width);
             var y = rowHeight * i;
-            var w = -map(parts[ii], 0, sumPartsTotal, 0, width);
+            var w = map(parts[j], 0, sumPartsTotal, 0, width);
             var h = rowHeight;
 
             var index = counter % colorCount;
             var col = color(hueValues[index], saturationValues[index], brightnessValues[index]);
             fill(col);
             rect(x, y, w, h);
+            sumPartsNow += parts[j];
+
             counter++;
         }
     }
