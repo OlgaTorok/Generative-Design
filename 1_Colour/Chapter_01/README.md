@@ -1,3 +1,5 @@
+[Colour](../)
+
 # 1. Changing colour and size using the mouse
 
 ## Step 1
