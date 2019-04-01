@@ -73,3 +73,6 @@ function keyPressed() {
     if (key == 's' || key == 'S') saveCanvas(gd.timestamp(), 'png');
 }
 ```
+
+![](../images/colour_01a.PNG?raw=true "")
+![](../images/colour_01b.PNG?raw=true "")

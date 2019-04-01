@@ -1,3 +1,5 @@
+[Colour](../)
+
 # 9. Generate a specific color palette and random tiles
 
 ## Step 1
@@ -332,3 +334,5 @@ function keyPressed() {
     }
 }
 ```
+![](../images/colour_09a.PNG?raw=true "")
+![](../images/colour_09b.PNG?raw=true "")

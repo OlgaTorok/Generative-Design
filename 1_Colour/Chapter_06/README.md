@@ -1,3 +1,5 @@
+[Colour](../)
+
 # 6.  Generates specific color palettes
 
 ## Step 1
@@ -333,3 +335,7 @@ function keyPressed() {
 
 }
 ```
+![](../images/colour_06a.PNG?raw=true "")
+![](../images/colour_06b.PNG?raw=true "")
+![](../images/colour_06c.PNG?raw=true "")
+![](../images/colour_06d.PNG?raw=true "")

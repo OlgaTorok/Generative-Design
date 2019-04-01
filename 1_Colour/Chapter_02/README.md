@@ -1,3 +1,5 @@
+[Colour](../)
+
 # 2. Draw color spectrum using the mouse
 
 ## Step 1
@@ -116,3 +118,7 @@ function keyPressed() {
     if (key == 's' || key == 'S') saveCanvas(gd.timestamp(), 'png');
 }
 ```
+
+![](../images/colour_02b.PNG?raw=true "")
+![](../images/colour_02c.PNG?raw=true "")
+![](../images/colour_02a.PNG?raw=true "")

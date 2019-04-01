@@ -1,3 +1,5 @@
+[Colour](../)
+
 # 8. Generate a specific color palette and random tiles using gradients
 
 ## Step 1
@@ -329,3 +331,5 @@ function keyPressed() {
     }
 }
 ```
+![](../images/colour_08a.PNG?raw=true "")
+![](../images/colour_08b.PNG?raw=true "")

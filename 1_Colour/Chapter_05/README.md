@@ -1,3 +1,5 @@
+[Colour](../)
+
 # 5.  Extract and sort the color palette of an image
 
 ## Step 1
@@ -194,3 +196,5 @@ function keyReleased() {
     if (key == '9') sortMode = gd.GRAYSCALE;
 }
 ```
+![](../images/colour_05a.PNG?raw=true "")
+![](../images/colour_05b.PNG?raw=true "")

@@ -1,3 +1,5 @@
+[Colour](../)
+
 # 4. Interpolate colours in different colour modes
 
 ## Step 1
@@ -280,3 +282,7 @@ function keyPressed() {
     if (key == '2') interpolateShortest = false;
 }
 ```
+
+![](../images/colour_04a.PNG?raw=true "")
+![](../images/colour_04b.PNG?raw=true "")
+![](../images/colour_04c.PNG?raw=true "")

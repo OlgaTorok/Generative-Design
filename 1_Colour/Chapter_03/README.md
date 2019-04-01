@@ -1,3 +1,5 @@
+[Colour](../)
+
 # 3. Change colour in circle using the mouse
 
 ## Step 1
@@ -157,3 +159,5 @@ function keyPressed() {
     }
 }
 ```
+
+![](../images/colour_03.PNG?raw=true "")
