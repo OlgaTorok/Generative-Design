@@ -1,4 +1,4 @@
-[Home](https://github.com/OlgaTorok/Generative-Design/)
+[Home](../)
 
 # Colours
 
