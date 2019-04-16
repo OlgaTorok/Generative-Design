@@ -1,8 +1,8 @@
-[Home](../)
+[Home](./)
 
 # Shapes
 
-This chapter contains the ...
+This chapter contains sketches that draw shapes
 
 1. [Chapter 1 - Draw a filled circle with lines](Chapter_01/)
 2. [Chapter 2 - Draw changing shapes using mouse drag 1](Chapter_02/)

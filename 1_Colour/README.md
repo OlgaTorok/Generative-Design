@@ -1,8 +1,8 @@
-[Home](../)
+[Home](./)
 
 # Colours
 
-This chapter contains the ...
+This chapter contains exercises that use colour
 
 1. [Chapter 1 - Changing colour and size](Chapter_01/)
 2. [Chapter 2 - Draw the colour spectrum](Chapter_02/)
