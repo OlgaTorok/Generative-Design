@@ -486,6 +486,6 @@ function keyPressed() {
 
 #### Results:
 
-![Gradiet text](../images/type_03.PNG?raw=true "Gradiet text")
-![Gradiet text](../images/type_03a.PNG?raw=true "Gradiet text")
-![Gradiet text](../images/type_03b.PNG?raw=true "Gradient text")
+![Gradiet text 1](../images/type_03.PNG?raw=true "Gradiet text 1")
+![Gradiet text 2](../images/type_03a.PNG?raw=true "Gradiet text 2")
+![Gradiet text 3](../images/type_03b.PNG?raw=true "Gradient text 3")

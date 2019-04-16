@@ -2,6 +2,8 @@
 
 # 1. Changing colour and size using the mouse
 
+In this sketch the mouse x and y position is used to change the colour of the canvas and the size and colour of the rectangle created in the middle of the canvas.
+
 ## Step 1
 
 ```js
@@ -74,5 +76,5 @@ function keyPressed() {
 }
 ```
 
-![](../images/colour_01a.PNG?raw=true "")
-![](../images/colour_01b.PNG?raw=true "")
+![ColourChange1](../images/colour_01a.PNG?raw=true "Colour change")
+![ColourChange2](../images/colour_01b.PNG?raw=true "Colour change")
