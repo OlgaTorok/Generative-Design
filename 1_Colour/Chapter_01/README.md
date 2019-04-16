@@ -76,5 +76,5 @@ function keyPressed() {
 }
 ```
 
-![ColourChange1](../images/colour_01a.PNG?raw=true "Colour change")
-![ColourChange2](../images/colour_01b.PNG?raw=true "Colour change")
+![ColourChange1](../images/colour_01a.PNG?raw=true "ColourChange1")
+![ColourChange2](../images/colour_01b.PNG?raw=true "ColourChange2")
