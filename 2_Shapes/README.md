@@ -1,4 +1,4 @@
-[Home](OlgaTorok/Generative-Design)
+[Home](https://github.com/OlgaTorok/Generative-Design/)
 
 # Shapes
 
