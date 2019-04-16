@@ -6,7 +6,7 @@ Gestaltung uses P5.js library to create fun, interactive graphics.
 
 His book and sketches can be found on the [Generative Design](http://www.generative-gestaltung.de) website.
 
-####Overview: 
+#### Overview: 
 1. [Colour](1_Colour/)
 2. [Shapes](2_Shapes/)
 3. [Type](3_Type/)
