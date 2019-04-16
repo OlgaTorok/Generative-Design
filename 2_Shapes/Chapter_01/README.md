@@ -107,6 +107,11 @@ function keyPressed() {
 }
 ```
 
+Result:
+
+Test the canvas [here](step03/)
+
+
 ![](../images/shapes_01c.PNG?raw=true "")
 ![](../images/shapes_01b.PNG?raw=true "")
 ![](../images/shapes_01a.PNG?raw=true "")
