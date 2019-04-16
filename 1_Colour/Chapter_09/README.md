@@ -2,6 +2,8 @@
 
 # 9. Generate a specific color palette and random tiles
 
+In this sketch gradients are used to generate a specific colour palette with random tile size and position.
+
 ## Step 1
 
 [Test](step01/)

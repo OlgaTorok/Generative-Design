@@ -2,6 +2,8 @@
 
 # 10. Generate a specific color palette and random tiles with radial gradient
 
+In this sketch raidal gradients are used to generate a specific colour palette with random tile size and position.
+
 ## Step 1
 
 [Test](step01/)
@@ -370,5 +372,5 @@ function keyPressed() {
 
 Results:
 
-![Radial gradient](../images/colour_10a.PNG?raw=true "Radial gradient")
-![Radial gradient](../images/colour_10b.PNG?raw=true "Radial gradient")
+![Radial gradient](../images/colour_10a.png?raw=true "Radial gradient")
+![Radial gradient](../images/colour_10b.png?raw=true "Radial gradient")
