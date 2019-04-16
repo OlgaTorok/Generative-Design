@@ -2,6 +2,8 @@
 
 # 4. Interpolate colours in different colour modes
 
+In this sketch, colour interpolation is used to create colour swatches. The swatches are created in a grid controlled by the mouse move and clicks. The colour mode of the swatches can be changed using the keys 1 and 2. 
+
 ## Step 1
 
 Draw a rectangle on the screen.
@@ -283,6 +285,6 @@ function keyPressed() {
 }
 ```
 
-![](../images/colour_04a.PNG?raw=true "")
-![](../images/colour_04b.PNG?raw=true "")
-![](../images/colour_04c.PNG?raw=true "")
+![Colour interpolation](../images/colour_04a.png?raw=true "Colour interpolation")
+![Colour interpolation](../images/colour_04b.png?raw=true "Colour interpolation")
+![Colour interpolation](../images/colour_04c.png?raw=true "Colour interpolation")

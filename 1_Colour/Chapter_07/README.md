@@ -2,6 +2,8 @@
 
 # 7. Generates a specific color palette
 
+This sketch uses the mouse clicks to create new random colour palletes of different size tiles. 
+ 
 ## Step 1
 
 ```js
@@ -303,5 +305,5 @@ function keyPressed() {
     }
 }
 ```
-![](../images/colour_07a.PNG?raw=true "")
-![](../images/colour_07b.PNG?raw=true "")
+![Colour palette](../images/colour_07a.png?raw=true "Colour palette")
+![Colour palette](../images/colour_07b.png?raw=true "Colour palette")

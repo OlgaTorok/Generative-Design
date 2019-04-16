@@ -1,6 +1,8 @@
 [Colour](../)
 
-# 2. Draw color spectrum using the mouse
+# 2. Draw colour spectrum using the mouse
+
+In this sketch, the mouse is used to create a spectrum of colours in a grid. 
 
 ## Step 1
 
@@ -119,6 +121,6 @@ function keyPressed() {
 }
 ```
 
-![](../images/colour_02b.PNG?raw=true "")
-![](../images/colour_02c.PNG?raw=true "")
-![](../images/colour_02a.PNG?raw=true "")
+![Color spectrum](../images/colour_02b.png?raw=true "Colour spectrum")
+![Color spectrum](../images/colour_02c.png?raw=true "Colour spectrum")
+![Color spectrum](../images/colour_02a.png?raw=true "Colour spectrum")

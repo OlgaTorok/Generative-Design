@@ -2,6 +2,8 @@
 
 # 3. Change colour in circle using the mouse
 
+This sketch creates a colour spectrum in a circle using triangle shapes. Using the keys 1 to 5, change the number of shapes. Mouse x is used to change the saturation of the colours and mouse y the brightness. 
+
 ## Step 1
 
 ```js
@@ -160,4 +162,4 @@ function keyPressed() {
 }
 ```
 
-![](../images/colour_03.PNG?raw=true "")
+![Colour wheel](../images/colour_03.png?raw=true "Colour wheel")

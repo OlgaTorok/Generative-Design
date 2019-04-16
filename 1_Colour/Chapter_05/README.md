@@ -2,6 +2,8 @@
 
 # 5.  Extract and sort the color palette of an image
 
+In this sketch, the colour palette of images are extracted by reading each pixel in the image and storing it into an array as RGB values. The pixels in the image can be sorted using the keys 5 to 9 and the image changes using the keys 1 to 4. Using the mouse the size of the grid changes to zoom in and out of the image. 
+
 ## Step 1
 
 ```js
@@ -196,5 +198,5 @@ function keyReleased() {
     if (key == '9') sortMode = gd.GRAYSCALE;
 }
 ```
-![](../images/colour_05a.PNG?raw=true "")
-![](../images/colour_05b.PNG?raw=true "")
+![Images](../images/colour_05a.png?raw=true "Images")
+![Images](../images/colour_05b.png?raw=true "Images")

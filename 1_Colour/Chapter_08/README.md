@@ -2,6 +2,8 @@
 
 # 8. Generate a specific color palette and random tiles using gradients
 
+In this sketch gradients are used as the fill style for the rectangles. The rectangles are drawn at random locations and sizes. 
+
 ## Step 1
 
 ```js
@@ -331,5 +333,5 @@ function keyPressed() {
     }
 }
 ```
-![](../images/colour_08a.PNG?raw=true "")
-![](../images/colour_08b.PNG?raw=true "")
+![Colour palette gradients](../images/colour_08a.png?raw=true "Colour palette gradients")
+![Colour palette gradients](../images/colour_08b.png?raw=true "Colour palette gradients")

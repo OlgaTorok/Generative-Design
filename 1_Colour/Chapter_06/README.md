@@ -2,6 +2,8 @@
 
 # 6.  Generates specific color palettes
 
+In this sketch, tiles are created to hold colour palettes. The number keys are used to change the colours to specific values for hue, saturation and brightness, using some randomness. The mouse is used to change the size of the tiles.
+
 ## Step 1
 
 Draw a rectangle (tile) on the screen.
@@ -335,7 +337,7 @@ function keyPressed() {
 
 }
 ```
-![](../images/colour_06a.PNG?raw=true "")
-![](../images/colour_06b.PNG?raw=true "")
-![](../images/colour_06c.PNG?raw=true "")
-![](../images/colour_06d.PNG?raw=true "")
+![Colour palettes 1](../images/colour_06a.png?raw=true "Colour palettes")
+![Colour palettes 2](../images/colour_06b.png?raw=true "Colour palettes")
+![Colour palettes 3](../images/colour_06c.png?raw=true "Colour palettes")
+![Colour palettes 4](../images/colour_06d.png?raw=true "Colour palettes")
