@@ -6,6 +6,8 @@ In this sketch the mouse x and y position is used to change the colour of the ca
 
 ## Step 1
 
+[Test](step01/)
+
 ```js
 'use strict';
 
@@ -27,6 +29,8 @@ function draw() {
 ```
 
 ## Step 2
+
+[Test](step02/)
 
 ```js
 'use strict';
@@ -53,6 +57,8 @@ function draw() {
 
 ## Step 3
 
+[Test](step03/)
+
 ```js
 'use strict';
 
@@ -75,6 +81,7 @@ function keyPressed() {
     if (key == 's' || key == 'S') saveCanvas(gd.timestamp(), 'png');
 }
 ```
+Results:
 
 ![Colour Change 1](../images/colour_01a.png?raw=true "Colour changes")
 ![Colour Change 2](../images/colour_01b.png?raw=true "Colour changes")

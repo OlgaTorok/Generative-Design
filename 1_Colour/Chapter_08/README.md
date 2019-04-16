@@ -6,6 +6,8 @@ In this sketch gradients are used as the fill style for the rectangles. The rect
 
 ## Step 1
 
+[Test](step01/)
+
 ```js
 'use strict';
 
@@ -62,6 +64,8 @@ function draw() {
 ```
 
 ## Step 2
+
+[Test](step02/)
 
 ```js
 'use strict';
@@ -143,6 +147,8 @@ function draw() {
 ```
 
 ## Step 3
+
+[Test](step03/)
 
 ```js
 'use strict';
@@ -233,6 +239,8 @@ function gradient(x, y, w, h, c1, c2) {
 ```
 
 ## Step 4
+
+[Test](step04/)
 
 ```js
 'use strict';
@@ -333,5 +341,8 @@ function keyPressed() {
     }
 }
 ```
+
+Results:
+
 ![Colour palette gradients](../images/colour_08a.png?raw=true "Colour palette gradients")
 ![Colour palette gradients](../images/colour_08b.png?raw=true "Colour palette gradients")

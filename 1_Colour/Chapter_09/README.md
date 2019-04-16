@@ -4,6 +4,8 @@
 
 ## Step 1
 
+[Test](step01/)
+
 ```js
 'use strict';
 
@@ -60,6 +62,8 @@ function draw() {
 ```
 
 ## Step 2
+
+[Test](step02/)
 
 ```js
 'use strict';
@@ -138,6 +142,8 @@ function draw() {
 ```
 
 ## Step 3
+
+[Test](step03/)
 
 ```js
 'use strict';
@@ -232,6 +238,8 @@ function gradient(x, y, w, h, c1, c2) {
 ```
 
 ## Step 4
+
+[Test](step04/)
 
 ```js
 'use strict';
@@ -334,5 +342,8 @@ function keyPressed() {
     }
 }
 ```
-![](../images/colour_09a.PNG?raw=true "")
-![](../images/colour_09b.PNG?raw=true "")
+
+Results:
+
+![Colour palette](../images/colour_09a.png?raw=true "Colour palette")
+![Colour palette](../images/colour_09b.png?raw=true "Colour palette")

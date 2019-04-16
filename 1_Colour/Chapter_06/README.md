@@ -7,6 +7,7 @@ In this sketch, tiles are created to hold colour palettes. The number keys are u
 ## Step 1
 
 Draw a rectangle (tile) on the screen.
+[Test](step01/)
 
 ```js
 'use strict';
@@ -31,6 +32,7 @@ function draw() {
 ## Step 2
 
 Draw a canvas full of tiles.
+[Test](step02/)
 
 ```js
 'use strict';
@@ -61,6 +63,7 @@ function draw() {
 ## Step 3
 
 Add colour pattern to the tiles.
+[Test](step03/)
 
 ```js
 'use strict';
@@ -119,6 +122,7 @@ function draw() {
 ## Step 4
 
 Add mouse interaction.
+[Test](step04/)
 
 ```js
 'use strict';
@@ -176,6 +180,7 @@ function draw() {
 ## Step 5
 
  Adding extra interactivity to the page by using keys.
+ [Test](step05/)
 
 ```js
 'use strict';
@@ -337,6 +342,8 @@ function keyPressed() {
 
 }
 ```
+Results:
+
 ![Colour palettes 1](../images/colour_06a.png?raw=true "Colour palettes")
 ![Colour palettes 2](../images/colour_06b.png?raw=true "Colour palettes")
 ![Colour palettes 3](../images/colour_06c.png?raw=true "Colour palettes")

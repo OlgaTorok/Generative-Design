@@ -6,6 +6,8 @@ In this sketch, the mouse is used to create a spectrum of colours in a grid.
 
 ## Step 1
 
+[Test](step01/)
+
 ```js
 'use strict';
 
@@ -25,6 +27,8 @@ function draw() {
 ```
 
 ## Step 2
+
+[Test](step02/)
 
 ```js
 'use strict';
@@ -60,6 +64,8 @@ function draw() {
 
 ## Step 3
 
+[Test](step03/)
+
 ```js
 'use strict';
 
@@ -91,6 +97,8 @@ function draw() {
 
 ## Step 4
 
+[Test](step04/)
+
 ```js
 'use strict';
 
@@ -120,6 +128,8 @@ function keyPressed() {
     if (key == 's' || key == 'S') saveCanvas(gd.timestamp(), 'png');
 }
 ```
+
+Results:
 
 ![Color spectrum](../images/colour_02b.png?raw=true "Colour spectrum")
 ![Color spectrum](../images/colour_02c.png?raw=true "Colour spectrum")

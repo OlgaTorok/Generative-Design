@@ -4,6 +4,8 @@
 
 ## Step 1
 
+[Test](step01/)
+
 ```js
 'use strict';
 
@@ -60,6 +62,8 @@ function draw() {
 ```
 
 ## Step 2
+
+[Test](step02/)
 
 ```js
 'use strict';
@@ -142,6 +146,8 @@ function draw() {
 ```
 
 ## Step 3
+
+[Test](step03/)
 
 ```js
 'use strict';
@@ -246,6 +252,8 @@ function centerGradient(x1, y1, r1, x2, y2, r2, c1, c2) {
 ```
 
 ## Step 4
+
+[Test](step04/)
 
 ```js
 'use strict';
@@ -359,5 +367,8 @@ function keyPressed() {
     }
 }
 ```
-![](../images/colour_10a.PNG?raw=true "")
-![](../images/colour_10b.PNG?raw=true "")
+
+Results:
+
+![Radial gradient](../images/colour_10a.PNG?raw=true "Radial gradient")
+![Radial gradient](../images/colour_10b.PNG?raw=true "Radial gradient")

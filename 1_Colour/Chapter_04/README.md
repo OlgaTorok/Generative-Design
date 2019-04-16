@@ -7,6 +7,7 @@ In this sketch, colour interpolation is used to create colour swatches. The swat
 ## Step 1
 
 Draw a rectangle on the screen.
+[Test](step01/)
 
 ```js
 'use strict';
@@ -32,6 +33,7 @@ function draw() {
 ## Step 2
 
 Draw a canvas full of rectangles using a loop.
+[Test](step02/)
 
 ```js
  'use strict';
@@ -63,6 +65,7 @@ function draw() {
 ## Step 3
 
 Add a palette of colours using interpolation.
+[Test](step03/)
 
 ```js
 'use strict';
@@ -132,6 +135,7 @@ function shakeColors() {
 ## Step 4
 
 Change rectangle colours randomly using mouse clicks.
+[Test](step04/)
 
 ```js
 'use strict';
@@ -206,6 +210,7 @@ function mouseReleased() {
 ## Step 5
 
 Add mouse interaction and options to save the canvas in an .ase or .png image or change the colour mode from HSB to RGB.
+[Test](step05/)
 
 ```js
 'use strict';
@@ -284,6 +289,8 @@ function keyPressed() {
     if (key == '2') interpolateShortest = false;
 }
 ```
+
+Results:
 
 ![Colour interpolation](../images/colour_04a.png?raw=true "Colour interpolation")
 ![Colour interpolation](../images/colour_04b.png?raw=true "Colour interpolation")

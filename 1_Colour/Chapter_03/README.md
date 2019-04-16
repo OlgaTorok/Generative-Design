@@ -6,6 +6,8 @@ This sketch creates a colour spectrum in a circle using triangle shapes. Using t
 
 ## Step 1
 
+[Test](step01/)
+
 ```js
 'use strict';
 
@@ -31,6 +33,8 @@ function draw() {
 ```
 
 ## Step 2
+
+[Test](step02/)
 
 ```js
 'use strict';
@@ -69,6 +73,8 @@ function draw() {
 
 ## Step 3
 
+[Test](step03/)
+
 ```js
 'use strict';
 
@@ -106,6 +112,8 @@ function draw() {
 ```
 
 ## Step 4
+
+[Test](step04/)
 
 ```js
 'use strict';
@@ -161,5 +169,7 @@ function keyPressed() {
     }
 }
 ```
+
+Results:
 
 ![Colour wheel](../images/colour_03.png?raw=true "Colour wheel")

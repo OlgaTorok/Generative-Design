@@ -6,6 +6,8 @@ This sketch uses the mouse clicks to create new random colour palletes of differ
  
 ## Step 1
 
+[Test](step01/)
+
 ```js
 'use strict';
 
@@ -60,6 +62,8 @@ function draw() {
 ```
 
 ## Step 2
+
+[Test](step02/)
 
 ```js
 'use strict';
@@ -140,6 +144,8 @@ function draw() {
 
 ## Step 3
 
+[Test](step03/)
+
 ```js
 'use strict';
 
@@ -218,6 +224,8 @@ function mouseReleased() {
 ```
 
 ## Step 4
+
+[Test](step04/)
 
 ```js
 'use strict';
@@ -305,5 +313,8 @@ function keyPressed() {
     }
 }
 ```
+
+Results:
+
 ![Colour palette](../images/colour_07a.png?raw=true "Colour palette")
 ![Colour palette](../images/colour_07b.png?raw=true "Colour palette")
