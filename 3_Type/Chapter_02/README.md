@@ -6,8 +6,6 @@ This exercise uses OpenType font file. The text is manipulated using the opentyp
 
 ## Step 1
 
-[Test](step01/)
-
 ```js
 // Declare variables for font
 let font;

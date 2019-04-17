@@ -6,8 +6,6 @@ In this exercise the function createGraphics() is used to draw text on canvas us
 
 ## Step 1
 
-[Test](step01/)
-
 ```js
 // Declare variables
 let font;
@@ -41,8 +39,6 @@ function setUptext(){
 ```
 
 ## Step 2
-
-[Test](step02/)
 
 ```js
 let font;

@@ -6,8 +6,6 @@ In this exercise text is drawn and manipulated using input box, checkbox and sli
 
 ## Step 1
 
-[Test](step01/)
-
 ```js
 'use strict';
 
@@ -22,7 +20,6 @@ function preload(){
     font = loadFont('../data/freeSansBold.ttf');
 }
 
-
 function setup(){
     noStroke();
 
@@ -36,11 +33,8 @@ function setup(){
     image(textImg, 0, 0);
 }
 
-
 function draw(){
-    
 }
-
 
 // Create image using graphics
 function setUptext(){
@@ -57,8 +51,6 @@ function setUptext(){
 ```
 
 ## Step 2
-
-[Test](step02/)
 
 ```js
 'use strict';
@@ -140,8 +132,6 @@ function setUpText(){
 ```
 
 ## Step 3
-
-[Test](step03/)
 
 ```js
 'use strict';
@@ -239,8 +229,6 @@ function setUpText(){
 
 ## Step 4
 
-[Test](step04/)
-
 ```js
 'use strict';
 
@@ -294,7 +282,6 @@ function setup(){
 
     setUpText();
 }
-
 
 function draw() {
     background(255);
@@ -354,8 +341,6 @@ function setUpText(){
 ```
 
 ## Step 5
-
-[Test](step05/)
 
 ```js
 'use strict';
