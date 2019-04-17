@@ -1,8 +1,8 @@
 [Shapes](../)
 
-# 10. Using slider and rotation of shapes in a grid
+# 10. Changing shape positions in a grid
 
-In this sketch the shapes rotate to follow the mouse and using a slider the size and number of shapes changes.
+In this sketch the shapes are following the movement of the mouse, and the mouse click changes the shape position to a random location.
 
 ## Step 1
 
@@ -11,42 +11,35 @@ In this sketch the shapes rotate to follow the mouse and using a slider the size
 ```js
 'use strict';
 
-// Declare variables for grid and shape
+// Declare variables for grid and circle radius
 let noOfTiles = 10;
 let tileWidth;
-let img;
-let actRandomSeed = 1000;
-
-// Preload the svg file
-function preload(){
-	img = loadImage('../img/star.svg');
-}
+let circleRadiusBig = 40;
 
 function setup(){
 	createCanvas(500, 500);
-	imageMode(CENTER);  //Set image mode to center
+    // Set the width of the tiles
 	tileWidth = width / noOfTiles; // the width of the tiles
 }
 
 function draw(){
-	background(0);
-	randomSeed(actRandomSeed);
-    // Translate to grid
+    background(123);
+    noStroke();
+    // Translate to tile
 	translate(tileWidth/2, tileWidth/2);
 
-	// Create a grid that will contain a list of shapes
+	// Create a grid for the big circles
     for (let gridY = 0; gridY < noOfTiles; gridY++) {
   	  	for (let gridX = 0; gridX < noOfTiles; gridX++) {
-            // Set the x ad y position
+            // Set x and y position for the big circles
 	  		let posX = gridX * tileWidth;
-            let posY = gridY * tileWidth;
+		  	let posY = gridY * tileWidth;
             
-			push();
-			translate(posX, posY);
-			image(img, 0, 0, tileWidth - 20, tileWidth - 20);
-			pop();
+            // Draw the big circles with no stroke
+            fill(0);
+			ellipse(posX, posY, circleRadiusBig, circleRadiusBig);
   	  	}
-  	}
+    }
 }
 ```
 
@@ -59,48 +52,42 @@ function draw(){
 
 let noOfTiles = 10;
 let tileWidth;
-let img;
-let actRandomSeed = 1000;
-// Declare the radius
-let minRadius = 1;
-let maxRadius = 100;
-// Declare the slider
-let mySlider;
-
-function preload(){
-	img = loadImage('../img/star.svg');
-}
+let circleRadiusBig = 40;
+let circleRadiusSmall = 20;
 
 function setup(){
 	createCanvas(500, 500);
-    imageMode(CENTER);
-    // Add the slider to canvas
-    mySlider = createSlider(3, 50, 3);
-	mySlider.position(10, 10);
-    mySlider.style('width', '180px');
+	tileWidth = width / noOfTiles;
 }
 
 function draw(){
-	background(0);
-    randomSeed(actRandomSeed);
-    
-    // Set the number of tiles to the slider value
-    noOfTiles = mySlider.value();
-    tileWidth = width / noOfTiles; // the width of the tiles
-    
+    background(123);
+    noStroke();
+
 	translate(tileWidth/2, tileWidth/2);
 
     for (let gridY = 0; gridY < noOfTiles; gridY++) {
   	  	for (let gridX = 0; gridX < noOfTiles; gridX++) {
+
 	  		let posX = gridX * tileWidth;
             let posY = gridY * tileWidth;
             
-			push();
-			translate(posX, posY);
-			image(img, 0, 0, tileWidth - 20, tileWidth - 20);
-			pop();
+            fill(0);
+			ellipse(posX, posY, circleRadiusBig, circleRadiusBig);
   	  	}
-  	}
+    }
+
+	// Create a grid for the white circles and draw them on top of the big ones
+    for (let gridY = 0; gridY < noOfTiles; gridY++) {
+        for (let gridX = 0; gridX < noOfTiles; gridX++) {
+            // Set the x and y position for the white circles
+            let posX = gridX * tileWidth;
+            let posY = gridY * tileWidth;
+
+            fill(255);
+            ellipse(posX, posY, circleRadiusSmall, circleRadiusSmall);
+        }
+    }
 }
 ```
 
@@ -113,36 +100,21 @@ function draw(){
 
 let noOfTiles = 10;
 let tileWidth;
-// Declare the angle
-let angle = 0;
-
-let img;
-let actRandomSeed = 1000;
-let minRadius = 1;
-let maxRadius = 100;
-let mySlider;
-
-function preload(){
-	img = loadImage('../img/star.svg');
-}
+let circleRadiusBig = 40;
+let circleRadiusSmall = 20;
+// Declare the ransom seed
+let actRandomSeed = 0;
 
 function setup(){
 	createCanvas(500, 500);
-    imageMode(CENTER);
-    angleMode(DEGREES); // Set the angle mode to degrees
-
-    mySlider = createSlider(3, 50, 3);
-	mySlider.position(10, 10);
-    mySlider.style('width', '180px');
+	tileWidth = width / noOfTiles;
 }
 
 function draw(){
-	background(0);
-    randomSeed(actRandomSeed);
-    
-    noOfTiles = mySlider.value();
-    tileWidth = width / noOfTiles;
-    
+    background(123);
+    noStroke();
+    randomSeed(actRandomSeed);  // Set random seed instead of noLoop()
+
 	translate(tileWidth/2, tileWidth/2);
 
     for (let gridY = 0; gridY < noOfTiles; gridY++) {
@@ -150,26 +122,40 @@ function draw(){
 
 	  		let posX = gridX * tileWidth;
             let posY = gridY * tileWidth;
-            // Set the angle for shapes to follow the mouse
-            angle = atan2((mouseY - posY),(mouseX -posX));
             
-			push();
-            translate(posX, posY);
-            rotate(angle);  // Rotate the shapes
-			image(img, 0, 0, tileWidth - 20, tileWidth - 20);
-			pop();
+            // Add shift position for the big circles
+            let shiftX = random(-1, 1) * mouseX / 20;
+			let shiftY = random(-1, 1) * mouseY / 20;
+            
+            fill(0);
+            // Add the sift to the x and y position
+			ellipse(posX + shiftX, posY  + shiftY, circleRadiusBig, circleRadiusBig);
   	  	}
-  	}
+    }
+
+    for (let gridY = 0; gridY < noOfTiles; gridY++) {
+        for (let gridX = 0; gridX < noOfTiles; gridX++) {
+            let posX = gridX * tileWidth;
+            let posY = gridY * tileWidth;
+
+            fill(255);
+            ellipse(posX, posY, circleRadiusSmall, circleRadiusSmall);
+        }
+    }
+}
+
+// Change circles position in the grid
+function mousePressed() {
+    actRandomSeed = random(100000);
 }
 
 // Save canvas
 function keyPressed() {
-    if (key == 's' || key == 'S') saveCanvas(gd.timestamp(), '.png');
+    if (key == 's' || key == 'S') saveCanvas(gd.timestamp(), '_mouseX_' + mouseX + '_mouseY_' + mouseY +'.png');
 }
 ```
 
 Results:
 
-![Slider](../images/shapes_10a.png?raw=true "Slider")
-![Slider](../images/shapes_10b.png?raw=true "Slider")
-![Slider](../images/shapes_10c.png?raw=true "Slider")
+![Circles](../images/shapes_09a.png?raw=true "Circles")
+![Circles](../images/shapes_09b.png?raw=true "Circles")

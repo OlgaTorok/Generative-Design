@@ -2,56 +2,52 @@
 
 let noOfTiles = 10;
 let tileWidth;
-let circleRadiusBig = 40;
-let circleRadiusSmall = 20;
-// Declare the ransom seed
+let shapeAngle = 0;
+let strokeColor;
+// Declare random seed
 let actRandomSeed = 0;
 
 function setup(){
-	createCanvas(500, 500);
-	tileWidth = width / noOfTiles;
+    createCanvas(500, 500);
+    angleMode(DEGREES);
+    strokeColor = color(255, 123);
+    tileWidth = width / noOfTiles;
 }
 
 function draw(){
     background(123);
-    noStroke();
-    randomSeed(actRandomSeed);  // Set random seed instead of noLoop()
+    randomSeed(actRandomSeed);  // Random seed used instead of noLoop()
 
-	translate(tileWidth/2, tileWidth/2);
-
-    for (let gridY = 0; gridY < noOfTiles; gridY++) {
-  	  	for (let gridX = 0; gridX < noOfTiles; gridX++) {
-
-	  		let posX = gridX * tileWidth;
-            let posY = gridY * tileWidth;
-            
-            // Add shift position for the big circles
-            let shiftX = random(-1, 1) * mouseX / 20;
-			let shiftY = random(-1, 1) * mouseY / 20;
-            
-            fill(0);
-            // Add the sift to the x and y position
-			ellipse(posX + shiftX, posY  + shiftY, circleRadiusBig, circleRadiusBig);
-  	  	}
-    }
-
+    translate(tileWidth/2, tileWidth/2);
+    
     for (let gridY = 0; gridY < noOfTiles; gridY++) {
         for (let gridX = 0; gridX < noOfTiles; gridX++) {
+            
             let posX = gridX * tileWidth;
             let posY = gridY * tileWidth;
 
-            fill(255);
-            ellipse(posX, posY, circleRadiusSmall, circleRadiusSmall);
+            // Set the shift variables for the shapes
+            let shiftX = random(-mouseX, mouseX) / 20;
+            let shiftY = random(-mouseX, mouseX) / 20;
+
+            let circleRadius = map(constrain(mouseY, 0, width, 0, 100), 0, width, 1, 60);
+		    let circleStroke = map(constrain(mouseY, 0, height, 1, 5), 0, height, 1, 10);
+
+            noFill(); 
+            stroke(strokeColor); 
+            strokeWeight(circleStroke);
+            // Add the shift to the x and y position
+            ellipse(posX + shiftX, posY + shiftY, circleRadius, circleRadius);
         }
     }
 }
 
-// Change circles position in the grid
+// Change the position of shapes if mouse is pressed
 function mousePressed() {
     actRandomSeed = random(100000);
 }
 
-// Save canvas
+// Save the canvas
 function keyPressed() {
     if (key == 's' || key == 'S') saveCanvas(gd.timestamp(), '_mouseX_' + mouseX + '_mouseY_' + mouseY +'.png');
 }

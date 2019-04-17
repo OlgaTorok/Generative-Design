@@ -2,40 +2,37 @@
 
 let noOfTiles = 10;
 let tileWidth;
-let circleRadiusBig = 40;
-let circleRadiusSmall = 20;
+// Declare the angle and stroke colour
+let shapeAngle = 0;
+let strokeColor;
 
 function setup(){
-	createCanvas(500, 500);
-	tileWidth = width / noOfTiles;
+    createCanvas(500, 500);
+    angleMode(DEGREES); // Set the angle mode to degrees
+    strokeColor = color(255, 123);  // Set the stroke colour
+    tileWidth = width / noOfTiles;
 }
 
 function draw(){
     background(123);
-    noStroke();
-
-	translate(tileWidth/2, tileWidth/2);
-
-    for (let gridY = 0; gridY < noOfTiles; gridY++) {
-  	  	for (let gridX = 0; gridX < noOfTiles; gridX++) {
-
-	  		let posX = gridX * tileWidth;
-            let posY = gridY * tileWidth;
-            
-            fill(0);
-			ellipse(posX, posY, circleRadiusBig, circleRadiusBig);
-  	  	}
-    }
-
-	// Create a grid for the white circles and draw them on top of the big ones
+    translate(tileWidth/2, tileWidth/2);
+    
     for (let gridY = 0; gridY < noOfTiles; gridY++) {
         for (let gridX = 0; gridX < noOfTiles; gridX++) {
-            // Set the x and y position for the white circles
+            
             let posX = gridX * tileWidth;
             let posY = gridY * tileWidth;
 
-            fill(255);
-            ellipse(posX, posY, circleRadiusSmall, circleRadiusSmall);
+            // Set the circular radius of the shape for mouse y
+            let circleRadius = map(constrain(mouseY, 0, width, 0, 100), 0, width, 1, 60);
+		    let circleStroke = map(constrain(mouseY, 0, height, 1, 5), 0, height, 1, 10);
+
+            noFill();   // No fill set
+            // Set stroke weight and colour
+            stroke(strokeColor); 
+            strokeWeight(circleStroke);
+            // Use new circle radius
+            ellipse(posX, posY, circleRadius, circleRadius);
         }
     }
 }

@@ -2,37 +2,50 @@
 
 let noOfTiles = 10;
 let tileWidth;
-// Declare the angle and stroke colour
+let shapes;
+let shapeSize = 40;
+// Declare the angle
 let shapeAngle = 0;
-let strokeColor;
+
+function preload(){
+    shapes =[];
+    shapes.push(loadImage('../img/SVG/star.svg'));
+}
 
 function setup(){
     createCanvas(500, 500);
-    angleMode(DEGREES); // Set the angle mode to degrees
-    strokeColor = color(255, 123);  // Set the stroke colour
-    tileWidth = width / noOfTiles;
+    imageMode(CENTER);
+    angleMode(DEGREES); // Set the angle mode for the rotation
+    
+	tileWidth = width / noOfTiles;
 }
 
 function draw(){
-    background(123);
-    translate(tileWidth/2, tileWidth/2);
-    
-    for (let gridY = 0; gridY < noOfTiles; gridY++) {
-        for (let gridX = 0; gridX < noOfTiles; gridX++) {
-            
-            let posX = gridX * tileWidth;
-            let posY = gridY * tileWidth;
+	background(0);
 
-            // Set the circular radius of the shape for mouse y
-            let circleRadius = map(constrain(mouseY, 0, width, 0, 100), 0, width, 1, 60);
-		    let circleStroke = map(constrain(mouseY, 0, height, 1, 5), 0, height, 1, 10);
+	for(let gridY = 0; gridY < noOfTiles; gridY++){
+		for(let gridX = 0; gridX < noOfTiles; gridX++){
 
-            noFill();   // No fill set
-            // Set stroke weight and colour
-            stroke(strokeColor); 
-            strokeWeight(circleStroke);
-            // Use new circle radius
-            ellipse(posX, posY, circleRadius, circleRadius);
-        }
-    }
+			let posX = gridX * tileWidth + tileWidth / 2;
+            let posY = gridY * tileWidth + tileWidth / 2;
+
+            // Calculate the angle between the mouse position the shape
+            var angle = atan2(mouseY - posY, mouseX - posX) + 20;
+
+			fill(0);
+			stroke(255);
+			strokeWeight(3);
+
+			push();
+            translate(posX, posY);
+            rotate(angle);	// Rotate to 45 degrees
+			image(shapes[0], 0, 0, shapeSize, shapeSize);
+			pop();
+		}
+	}
+}
+
+// Save the canvas
+function keyPressed() {
+    if (key == 's' || key == 'S') saveCanvas(gd.timestamp(), 'png');
 }

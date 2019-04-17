@@ -1,8 +1,8 @@
 [Shapes](../)
 
-# 9. Changing shape positions in a grid
+# 9. Changing size and position of circles in a grid
 
-In this sketch the shapes are following the movement of the mouse, and the mouse click changes the shape position to a random location.
+In this sketch, the circles in the grid are changing location and size depending on the mouse position.
 
 ## Step 1
 
@@ -11,34 +11,28 @@ In this sketch the shapes are following the movement of the mouse, and the mouse
 ```js
 'use strict';
 
-// Declare variables for grid and circle radius
 let noOfTiles = 10;
 let tileWidth;
-let circleRadiusBig = 40;
 
 function setup(){
-	createCanvas(500, 500);
-    // Set the width of the tiles
-	tileWidth = width / noOfTiles; // the width of the tiles
+    createCanvas(500, 500);
+    tileWidth = width / noOfTiles; // The width of the tiles
 }
 
 function draw(){
     background(123);
-    noStroke();
-    // Translate to tile
-	translate(tileWidth/2, tileWidth/2);
-
-	// Create a grid for the big circles
+    // Translate grid to half tile width
+    translate(tileWidth/2, tileWidth/2);
+    
+	// Create a grid that will contain a list of shapes
     for (let gridY = 0; gridY < noOfTiles; gridY++) {
-  	  	for (let gridX = 0; gridX < noOfTiles; gridX++) {
-            // Set x and y position for the big circles
-	  		let posX = gridX * tileWidth;
-		  	let posY = gridY * tileWidth;
-            
-            // Draw the big circles with no stroke
-            fill(0);
-			ellipse(posX, posY, circleRadiusBig, circleRadiusBig);
-  	  	}
+        for (let gridX = 0; gridX < noOfTiles; gridX++) {
+            // Set the x and y position for the shape
+            let posX = gridX * tileWidth;
+            let posY = gridY * tileWidth;
+            // Draw the shape
+            ellipse(posX, posY, 10, 10);
+        }
     }
 }
 ```
@@ -52,40 +46,37 @@ function draw(){
 
 let noOfTiles = 10;
 let tileWidth;
-let circleRadiusBig = 40;
-let circleRadiusSmall = 20;
+// Declare the angle and stroke colour
+let shapeAngle = 0;
+let strokeColor;
 
 function setup(){
-	createCanvas(500, 500);
-	tileWidth = width / noOfTiles;
+    createCanvas(500, 500);
+    angleMode(DEGREES); // Set the angle mode to degrees
+    strokeColor = color(255, 123);  // Set the stroke colour
+    tileWidth = width / noOfTiles;
 }
 
 function draw(){
     background(123);
-    noStroke();
-
-	translate(tileWidth/2, tileWidth/2);
-
-    for (let gridY = 0; gridY < noOfTiles; gridY++) {
-  	  	for (let gridX = 0; gridX < noOfTiles; gridX++) {
-
-	  		let posX = gridX * tileWidth;
-            let posY = gridY * tileWidth;
-            
-            fill(0);
-			ellipse(posX, posY, circleRadiusBig, circleRadiusBig);
-  	  	}
-    }
-
-	// Create a grid for the white circles and draw them on top of the big ones
+    translate(tileWidth/2, tileWidth/2);
+    
     for (let gridY = 0; gridY < noOfTiles; gridY++) {
         for (let gridX = 0; gridX < noOfTiles; gridX++) {
-            // Set the x and y position for the white circles
+            
             let posX = gridX * tileWidth;
             let posY = gridY * tileWidth;
 
-            fill(255);
-            ellipse(posX, posY, circleRadiusSmall, circleRadiusSmall);
+            // Set the circular radius of the shape for mouse y
+            let circleRadius = map(constrain(mouseY, 0, width, 0, 100), 0, width, 1, 60);
+		    let circleStroke = map(constrain(mouseY, 0, height, 1, 5), 0, height, 1, 10);
+
+            noFill();   // No fill set
+            // Set stroke weight and colour
+            stroke(strokeColor); 
+            strokeWeight(circleStroke);
+            // Use new circle radius
+            ellipse(posX, posY, circleRadius, circleRadius);
         }
     }
 }
@@ -100,62 +91,60 @@ function draw(){
 
 let noOfTiles = 10;
 let tileWidth;
-let circleRadiusBig = 40;
-let circleRadiusSmall = 20;
-// Declare the ransom seed
+let shapeAngle = 0;
+let strokeColor;
+// Declare random seed
 let actRandomSeed = 0;
 
 function setup(){
-	createCanvas(500, 500);
-	tileWidth = width / noOfTiles;
+    createCanvas(500, 500);
+    angleMode(DEGREES);
+    strokeColor = color(255, 123);
+    tileWidth = width / noOfTiles;
 }
 
 function draw(){
     background(123);
-    noStroke();
-    randomSeed(actRandomSeed);  // Set random seed instead of noLoop()
+    randomSeed(actRandomSeed);  // Random seed used instead of noLoop()
 
-	translate(tileWidth/2, tileWidth/2);
-
-    for (let gridY = 0; gridY < noOfTiles; gridY++) {
-  	  	for (let gridX = 0; gridX < noOfTiles; gridX++) {
-
-	  		let posX = gridX * tileWidth;
-            let posY = gridY * tileWidth;
-            
-            // Add shift position for the big circles
-            let shiftX = random(-1, 1) * mouseX / 20;
-			let shiftY = random(-1, 1) * mouseY / 20;
-            
-            fill(0);
-            // Add the sift to the x and y position
-			ellipse(posX + shiftX, posY  + shiftY, circleRadiusBig, circleRadiusBig);
-  	  	}
-    }
-
+    translate(tileWidth/2, tileWidth/2);
+    
     for (let gridY = 0; gridY < noOfTiles; gridY++) {
         for (let gridX = 0; gridX < noOfTiles; gridX++) {
+            
             let posX = gridX * tileWidth;
             let posY = gridY * tileWidth;
 
-            fill(255);
-            ellipse(posX, posY, circleRadiusSmall, circleRadiusSmall);
+            // Set the shift variables for the shapes
+            let shiftX = random(-mouseX, mouseX) / 20;
+            let shiftY = random(-mouseX, mouseX) / 20;
+
+            let circleRadius = map(constrain(mouseY, 0, width, 0, 100), 0, width, 1, 60);
+		    let circleStroke = map(constrain(mouseY, 0, height, 1, 5), 0, height, 1, 10);
+
+            noFill(); 
+            stroke(strokeColor); 
+            strokeWeight(circleStroke);
+            // Add the shift to the x and y position
+            ellipse(posX + shiftX, posY + shiftY, circleRadius, circleRadius);
         }
     }
 }
 
-// Change circles position in the grid
+// Change the position of shapes if mouse is pressed
 function mousePressed() {
     actRandomSeed = random(100000);
 }
 
-// Save canvas
+// Save the canvas
 function keyPressed() {
-    if (key == 's' || key == 'S') saveCanvas(gd.timestamp(), '_mouseX_' + mouseX + '_mouseY_' + mouseY +'.png');
+    if (key == 's' || key == 'S') saveCanvas(gd.timestamp(), '_mouseX_' + mouseX + '_mouseY_' + mouseY +'.png';
 }
 ```
 
 Results:
 
-![Circles](../images/shapes_09a.png?raw=true "Circles")
-![Circles](../images/shapes_09b.png?raw=true "Circles")
+![Circles](../images/shapes_08a.png?raw=true "Circles")
+![Circles](../images/shapes_08b.png?raw=true "Circles")
+![Circles](../images/shapes_08c.png?raw=true "Circles")
+![Circles](../images/shapes_08d.png?raw=true "Circles")

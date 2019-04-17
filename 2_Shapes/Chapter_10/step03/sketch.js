@@ -2,36 +2,21 @@
 
 let noOfTiles = 10;
 let tileWidth;
-// Declare the angle
-let angle = 0;
-
-let img;
-let actRandomSeed = 1000;
-let minRadius = 1;
-let maxRadius = 100;
-let mySlider;
-
-function preload(){
-	img = loadImage('../img/star.svg');
-}
+let circleRadiusBig = 40;
+let circleRadiusSmall = 20;
+// Declare the ransom seed
+let actRandomSeed = 0;
 
 function setup(){
 	createCanvas(500, 500);
-    imageMode(CENTER);
-    angleMode(DEGREES); // Set the angle mode to degrees
-
-    mySlider = createSlider(3, 50, 3);
-	mySlider.position(10, 10);
-    mySlider.style('width', '180px');
+	tileWidth = width / noOfTiles;
 }
 
 function draw(){
-	background(0);
-    randomSeed(actRandomSeed);
-    
-    noOfTiles = mySlider.value();
-    tileWidth = width / noOfTiles;
-    
+    background(123);
+    noStroke();
+    randomSeed(actRandomSeed);  // Set random seed instead of noLoop()
+
 	translate(tileWidth/2, tileWidth/2);
 
     for (let gridY = 0; gridY < noOfTiles; gridY++) {
@@ -39,16 +24,31 @@ function draw(){
 
 	  		let posX = gridX * tileWidth;
             let posY = gridY * tileWidth;
-            // Set the angle for shapes to follow the mouse
-            angle = atan2((mouseY - posY),(mouseX -posX));
             
-			push();
-            translate(posX, posY);
-            rotate(angle);  // Rotate the shapes
-			image(img, 0, 0, tileWidth - 20, tileWidth - 20);
-			pop();
+            // Add shift position for the big circles
+            let shiftX = random(-1, 1) * mouseX / 20;
+			let shiftY = random(-1, 1) * mouseY / 20;
+            
+            fill(0);
+            // Add the sift to the x and y position
+			ellipse(posX + shiftX, posY  + shiftY, circleRadiusBig, circleRadiusBig);
   	  	}
-  	}
+    }
+
+    for (let gridY = 0; gridY < noOfTiles; gridY++) {
+        for (let gridX = 0; gridX < noOfTiles; gridX++) {
+            let posX = gridX * tileWidth;
+            let posY = gridY * tileWidth;
+
+            fill(255);
+            ellipse(posX, posY, circleRadiusSmall, circleRadiusSmall);
+        }
+    }
+}
+
+// Change circles position in the grid
+function mousePressed() {
+    actRandomSeed = random(100000);
 }
 
 // Save canvas

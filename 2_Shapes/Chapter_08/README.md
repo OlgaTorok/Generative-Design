@@ -1,10 +1,63 @@
 [Shapes](../)
 
-# 8. Changing size and position of circles in a grid
+# 8. SVG shapes in a grid, that are always facing the mouse
 
-In this sketch, the circles in the grid are changing location and size depending on the mouse position.
+In this sketch, SVG shapes are used to follow the mouse.
 
 ## Step 1
+
+[Test](step01/)
+
+```js
+// Declare variables for tiles
+let noOfTiles = 10;
+let tileWidth;
+let shapes;
+let shapeSize = 40;
+
+// Preload the svg file and create an array of shapes
+function preload(){
+    shapes =[];
+    shapes.push(loadImage('../img/SVG/star.svg'));
+}
+
+function setup(){
+    createCanvas(500, 500);
+    // Set the image to center
+	imageMode(CENTER);
+    // Set the tile width
+	tileWidth = width / noOfTiles;
+}
+
+function draw(){
+	background(0);
+
+
+    // Create a grid that will contain a list of objects
+	for(let gridY = 0; gridY < noOfTiles; gridY++){
+		for(let gridX = 0; gridX < noOfTiles; gridX++){
+            // Set the x and y position of the objects using the grid and the tile width
+			let posX = gridX * tileWidth + tileWidth / 2;
+            let posY = gridY * tileWidth + tileWidth / 2;
+
+			// Fill and give the shapes stroke and weight
+			fill(0);
+			stroke(255);
+			strokeWeight(3);
+
+			// We use push and pop so the indivisual shapes are drawn at the appropraiate location without overlapping
+			push();
+			// Translate the tiles so they sit in the grid
+            translate(posX, posY);
+            // Add the image to the grid
+			image(shapes[0], 0, 0, shapeSize, shapeSize);
+			pop();
+		}
+	}
+}
+```
+
+## Step 2
 
 [Test](step01/)
 
@@ -13,138 +66,56 @@ In this sketch, the circles in the grid are changing location and size depending
 
 let noOfTiles = 10;
 let tileWidth;
-
-function setup(){
-    createCanvas(500, 500);
-    tileWidth = width / noOfTiles; // The width of the tiles
-}
-
-function draw(){
-    background(123);
-    // Translate grid to half tile width
-    translate(tileWidth/2, tileWidth/2);
-    
-	// Create a grid that will contain a list of shapes
-    for (let gridY = 0; gridY < noOfTiles; gridY++) {
-        for (let gridX = 0; gridX < noOfTiles; gridX++) {
-            // Set the x and y position for the shape
-            let posX = gridX * tileWidth;
-            let posY = gridY * tileWidth;
-            // Draw the shape
-            ellipse(posX, posY, 10, 10);
-        }
-    }
-}
-```
-
-## Step 2
-
-[Test](step02/)
-
-```js
-'use strict';
-
-let noOfTiles = 10;
-let tileWidth;
-// Declare the angle and stroke colour
+let shapes;
+let shapeSize;
+// Declare the angle
 let shapeAngle = 0;
-let strokeColor;
+
+function preload(){
+    shapes =[];
+    shapes.push(loadImage('../img/SVG/star.svg'));
+}
 
 function setup(){
     createCanvas(500, 500);
-    angleMode(DEGREES); // Set the angle mode to degrees
-    strokeColor = color(255, 123);  // Set the stroke colour
-    tileWidth = width / noOfTiles;
+    imageMode(CENTER);
+    angleMode(DEGREES); // Set the angle mode for the rotation
+    
+	tileWidth = width / noOfTiles;
 }
 
 function draw(){
-    background(123);
-    translate(tileWidth/2, tileWidth/2);
-    
-    for (let gridY = 0; gridY < noOfTiles; gridY++) {
-        for (let gridX = 0; gridX < noOfTiles; gridX++) {
-            
-            let posX = gridX * tileWidth;
-            let posY = gridY * tileWidth;
+	background(0);
 
-            // Set the circular radius of the shape for mouse y
-            let circleRadius = map(constrain(mouseY, 0, width, 0, 100), 0, width, 1, 60);
-		    let circleStroke = map(constrain(mouseY, 0, height, 1, 5), 0, height, 1, 10);
+	for(let gridY = 0; gridY < noOfTiles; gridY++){
+		for(let gridX = 0; gridX < noOfTiles; gridX++){
 
-            noFill();   // No fill set
-            // Set stroke weight and colour
-            stroke(strokeColor); 
-            strokeWeight(circleStroke);
-            // Use new circle radius
-            ellipse(posX, posY, circleRadius, circleRadius);
-        }
-    }
-}
-```
+			let posX = gridX * tileWidth + tileWidth / 2;
+            let posY = gridY * tileWidth + tileWidth / 2;
 
-## Step 3
+            // Calculate the angle between the mouse position the shape
+            var angle = atan2(mouseY - posY, mouseX - posX) + 20;
 
-[Test](step03/)
+			fill(0);
+			stroke(255);
+			strokeWeight(3);
 
-```js
-'use strict';
-
-let noOfTiles = 10;
-let tileWidth;
-let shapeAngle = 0;
-let strokeColor;
-// Declare random seed
-let actRandomSeed = 0;
-
-function setup(){
-    createCanvas(500, 500);
-    angleMode(DEGREES);
-    strokeColor = color(255, 123);
-    tileWidth = width / noOfTiles;
-}
-
-function draw(){
-    background(123);
-    randomSeed(actRandomSeed);  // Random seed used instead of noLoop()
-
-    translate(tileWidth/2, tileWidth/2);
-    
-    for (let gridY = 0; gridY < noOfTiles; gridY++) {
-        for (let gridX = 0; gridX < noOfTiles; gridX++) {
-            
-            let posX = gridX * tileWidth;
-            let posY = gridY * tileWidth;
-
-            // Set the shift variables for the shapes
-            let shiftX = random(-mouseX, mouseX) / 20;
-            let shiftY = random(-mouseX, mouseX) / 20;
-
-            let circleRadius = map(constrain(mouseY, 0, width, 0, 100), 0, width, 1, 60);
-		    let circleStroke = map(constrain(mouseY, 0, height, 1, 5), 0, height, 1, 10);
-
-            noFill(); 
-            stroke(strokeColor); 
-            strokeWeight(circleStroke);
-            // Add the shift to the x and y position
-            ellipse(posX + shiftX, posY + shiftY, circleRadius, circleRadius);
-        }
-    }
-}
-
-// Change the position of shapes if mouse is pressed
-function mousePressed() {
-    actRandomSeed = random(100000);
+			push();
+            translate(posX, posY);
+            rotate(angle);	// Rotate to 45 degrees
+			image(shapes[0], 0, 0, shapeSize, shapeSize);
+			pop();
+		}
+	}
 }
 
 // Save the canvas
 function keyPressed() {
-    if (key == 's' || key == 'S') saveCanvas(gd.timestamp(), '_mouseX_' + mouseX + '_mouseY_' + mouseY +'.png';
+    if (key == 's' || key == 'S') saveCanvas(gd.timestamp(), 'png');
 }
 ```
 
-Results:
+Result:
 
-![Circles](../images/shapes_08a.png?raw=true "Circles")
-![Circles](../images/shapes_08b.png?raw=true "Circles")
-![Circles](../images/shapes_08c.png?raw=true "Circles")
-![Circles](../images/shapes_08d.png?raw=true "Circles")
+![SVG shapes](../images/shapes_07b.png?raw=true "SVG shapes")
+
