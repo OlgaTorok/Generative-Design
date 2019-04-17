@@ -170,6 +170,6 @@ function keyPressed() {
 
 Results:
 
-![SVG slider](../images/shapes_10a.png?raw=true "SVG slider")
-![SVG slider](../images/shapes_10b.png?raw=true "SVG slider")
-![SVG slider](../images/shapes_10c.png?raw=true "SVG slider")
+![Slider](../images/shapes_10a.png?raw=true "Slider")
+![Slider](../images/shapes_10b.png?raw=true "Slider")
+![Slider](../images/shapes_10c.png?raw=true "Slider")

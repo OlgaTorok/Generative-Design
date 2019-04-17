@@ -118,4 +118,4 @@ Results:
 
 ![Lines circle](../images/shapes_01c.png?raw=true "Lines circle")
 ![Lines circle](../images/shapes_01b.png?raw=true "Lines circle")
-![Lines circle](../images/shapes_01a.png?raw=true "Lines circle")
+![Lines circle](../images/shapes_01a.PNG?raw=true "Lines circle")
