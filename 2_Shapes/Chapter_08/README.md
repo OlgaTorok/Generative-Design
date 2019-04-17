@@ -59,7 +59,7 @@ function draw(){
 
 ## Step 2
 
-[Test](step01/)
+[Test](step02/)
 
 ```js
 'use strict';
