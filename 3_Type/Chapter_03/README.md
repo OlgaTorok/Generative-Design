@@ -6,6 +6,8 @@ In this exercise text is drawn and manipulated using input box, checkbox and sli
 
 ## Step 1
 
+[Test](step01/)
+
 ```js
 'use strict';
 
@@ -56,6 +58,8 @@ function setUptext(){
 
 ## Step 2
 
+[Test](step02/)
+
 ```js
 'use strict';
 
@@ -75,7 +79,6 @@ function preload(){
     font = loadFont('../data/freeSansBold.ttf');
 }
 
-
 function setup(){
     noStroke();
 
@@ -90,7 +93,6 @@ function setup(){
 
     setUpText();
 }
-
 
 function draw() {
     background(255);
@@ -125,8 +127,6 @@ function update() {
     }
 }
 
-
-
 function setUpText(){
     textImg = createGraphics(width, height);
     textImg.pixelDensity(1);
@@ -139,8 +139,9 @@ function setUpText(){
 }
 ```
 
-
 ## Step 3
+
+[Test](step03/)
 
 ```js
 'use strict';
@@ -157,11 +158,9 @@ let circleRadius = 10;
 let checkBox;
 let filled = 1;
 
-
 function preload(){
     font = loadFont('../data/freeSansBold.ttf');
 }
-
 
 function setup(){
     noStroke();
@@ -181,7 +180,6 @@ function setup(){
 
     setUpText();
 }
-
 
 function draw() {
     background(255);
@@ -227,7 +225,6 @@ function update() {
     }
 }
 
-
 function setUpText(){
     textImg = createGraphics(width, height);
     textImg.pixelDensity(1);
@@ -240,8 +237,9 @@ function setUpText(){
 }
 ```
 
-
 ## Step 4
+
+[Test](step04/)
 
 ```js
 'use strict';
@@ -355,8 +353,9 @@ function setUpText(){
 }
 ```
 
-
 ## Step 5
+
+[Test](step05/)
 
 ```js
 'use strict';
@@ -414,7 +413,6 @@ function setup(){
     gradient.loadPixels();
 }
 
-
 function draw() {
     background(255);
 
@@ -466,7 +464,6 @@ function update() {
     fontSize = sizeSlider.value();
 }
 
-
 function setUpText(){
     textImg = createGraphics(width, height);
     textImg.pixelDensity(1);
@@ -486,6 +483,6 @@ function keyPressed() {
 
 #### Results:
 
-![Gradiet text 1](../images/type_03.PNG?raw=true "Gradiet text 1")
-![Gradiet text 2](../images/type_03a.PNG?raw=true "Gradiet text 2")
+![Gradiet text 1](../images/type_03.png?raw=true "Gradiet text 1")
+![Gradiet text 2](../images/type_03a.png?raw=true "Gradiet text 2")
 ![Gradiet text 3](../images/type_03b.PNG?raw=true "Gradient text 3")

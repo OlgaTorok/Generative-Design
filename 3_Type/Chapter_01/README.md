@@ -6,6 +6,8 @@ In this exercise the function createGraphics() is used to draw text on canvas us
 
 ## Step 1
 
+[Test](step01/)
+
 ```js
 // Declare variables
 let font;
@@ -39,6 +41,8 @@ function setUptext(){
 ```
 
 ## Step 2
+
+[Test](step02/)
 
 ```js
 let font;
@@ -93,6 +97,7 @@ function keyPressed() {
     if (key == 's' || key == 'S') saveCanvas(gd.timestamp(), numTiles + '_tiles' + '.png');
 }
 ```
+
 #### Result: 
 
-![Text on Canvas](../images/type_01.PNG?raw=true "Text on canvas")
+![Text on Canvas](../images/type_01.png?raw=true "Text on canvas")

@@ -6,6 +6,8 @@ This exercise uses OpenType font file. The text is manipulated using the opentyp
 
 ## Step 1
 
+[Test](step01/)
+
 ```js
 // Declare variables for font
 let font;
@@ -48,6 +50,8 @@ function draw() {
 ```
 
 ## Step 2
+
+[Test](step02/)
 
 ```js
 let font;
@@ -96,7 +100,8 @@ function keyPressed() {
     if (key == 's' || key == 'S') saveCanvas(gd.timestamp(), '.png');
 }
 ```
+
 #### Result: 
 
-![OpenType font on canvas](../images/type_02.PNG?raw=true "OpenType font on canvas")
+![OpenType font on canvas](../images/type_02.png?raw=true "OpenType font on canvas")
 
