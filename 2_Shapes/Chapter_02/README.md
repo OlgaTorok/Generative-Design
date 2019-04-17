@@ -118,5 +118,5 @@ function keyPressed() {
 
 Results:
 
-![Changing shapes](../images/shapes_02a.png?raw=true "Changing shapes")
+![Changing shapes](../images/shapes_02a.PNG?raw=true "Changing shapes")
 ![Changing shapes](../images/shapes_02b.png?raw=true "Changing shapes")
