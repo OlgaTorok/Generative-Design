@@ -2,7 +2,11 @@
 
 # 7a. SVG shapes in a grid, that are always facing the mouse
 
+In this sketch, SVG shapes are used to follow the mouse.
+
 ## Step 1
+
+[Test](step01/)
 
 ```js
 // Declare variables for tiles
@@ -54,6 +58,8 @@ function draw(){
 ```
 
 ## Step 2
+
+[Test](step01/)
 
 ```js
 'use strict';
@@ -109,5 +115,7 @@ function keyPressed() {
 }
 ```
 
-![](../images/shapes_07b.PNG?raw=true "")
+Result:
+
+![SVG shapes](../images/shapes_07b.png?raw=true "SVG shapes")
 

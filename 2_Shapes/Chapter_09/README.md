@@ -1,8 +1,12 @@
 [Shapes](../)
 
-# 9. Changing shape color and positions in a grid
+# 9. Changing shape positions in a grid
+
+In this sketch the shapes are following the movement of the mouse, and the mouse click changes the shape position to a random location.
 
 ## Step 1
+
+[Test](step01/)
 
 ```js
 'use strict';
@@ -40,6 +44,8 @@ function draw(){
 ```
 
 ## Step 2
+
+[Test](step02/)
 
 ```js
 'use strict';
@@ -86,6 +92,8 @@ function draw(){
 ```
 
 ## Step 3
+
+[Test](step03/)
 
 ```js
 'use strict';
@@ -147,5 +155,7 @@ function keyPressed() {
 }
 ```
 
-![](../images/shapes_09a.PNG?raw=true "")
-![](../images/shapes_09b.PNG?raw=true "")
+Results:
+
+![Circles](../images/shapes_09a.png?raw=true "Circles")
+![Circles](../images/shapes_09b.png?raw=true "Circles")

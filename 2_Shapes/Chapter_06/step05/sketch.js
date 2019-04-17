@@ -21,7 +21,7 @@ function draw(){
     background(360, 0, 50);
     strokeWeight(mouseX / 15);
     randomSeed(actRandomSeed);
-    // Change the nimber of tiles
+    // Change the number of tiles
     noOfTiles = mouseX / 15;
 
 	for(let gridY = 0; gridY < noOfTiles; gridY++){

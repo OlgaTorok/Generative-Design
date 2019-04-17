@@ -1,8 +1,12 @@
 [Shapes](../)
 
-# 5. Changing stroke weight and colour in a grid
+# 5. Changing stroke weight on diagonals in a grid with colors
+
+This sketch is similar to Chapter 4, with the exception that the line colour and opacity can be changed using the keys 4, 5 and 6.
 
 ## Step 1
+
+[Test](step01/)
 
 ```js
 'use strict';
@@ -47,6 +51,8 @@ function draw(){
 ```
 
 ## Step 2
+
+[Test](step02/)
 
 ```js
 'use strict';
@@ -104,6 +110,8 @@ function keyPressed() {
 ```
 
 ## Step 3
+
+[Test](step03/)
 
 ```js
 'use strict';
@@ -193,10 +201,12 @@ function keyPressed() {
 }
 ```
 
-![](../images/shapes_05a.PNG?raw=true "")
-![](../images/shapes_05d.PNG?raw=true "")
-![](../images/shapes_05b.PNG?raw=true "")
-![](../images/shapes_05c.PNG?raw=true "")
-![](../images/shapes_05e.PNG?raw=true "")
-![](../images/shapes_05f.PNG?raw=true "")
+Results:
+
+![Changing lines](../images/shapes_05a.png?raw=true "Changing lines")
+![Changing lines](../images/shapes_05d.png?raw=true "Changing lines")
+![Changing lines](../images/shapes_05b.png?raw=true "Changing lines")
+![Changing lines](../images/shapes_05c.png?raw=true "Changing lines")
+![Changing lines](../images/shapes_05e.png?raw=true "Changing lines")
+![Changing lines](../images/shapes_05f.png?raw=true "Changing lines")
 

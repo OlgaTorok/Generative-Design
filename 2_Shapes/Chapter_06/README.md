@@ -1,8 +1,12 @@
 [Shapes](../)
 
-# 6. Changing number, color and strokeweight on diagonals in a grid
+# 6. Changing number, color and stroke weight on diagonals in a grid
+
+In this sketch, the mouse changes the number, colour and stroke weight of the lines in the grid. The keys 1, 2 and 5 are changing the line colour and the keys 3 and 4 are used for line transparency.
 
 ## Step 1
+
+[Test](step01/)
 
 ```js
 'use strict';
@@ -45,6 +49,8 @@ function draw(){
 ```
 
 ## Step 2
+
+[Test](step02/)
 
 ```js
 'use strict';
@@ -89,6 +95,8 @@ function mousePressed() {
 ```
 
 ## Step 3
+
+[Test](step03/)
 
 ```js
 'use strict';
@@ -143,6 +151,8 @@ function mousePressed() {
 ```
 
 ## Step 4
+
+[Test](step04/)
 
 ```js
 'use strict';
@@ -208,6 +218,8 @@ function mousePressed() {
 
 ## Step 5
 
+[Test](step05/)
+
 ```js
 'use strict';
 
@@ -232,7 +244,7 @@ function draw(){
     background(360, 0, 50);
     strokeWeight(mouseX / 15);
     randomSeed(actRandomSeed);
-    // Change the nimber of tiles
+    // Change the number of tiles
     noOfTiles = mouseX / 15;
 
 	for(let gridY = 0; gridY < noOfTiles; gridY++){
@@ -308,6 +320,8 @@ function colorsEqual(col1, col2) {
 }
 ```
 
-![](../images/shapes_06a.PNG?raw=true "")
-![](../images/shapes_06b.PNG?raw=true "")
-![](../images/shapes_06c.PNG?raw=true "")
+Results:
+
+![Changing diagonals](../images/shapes_06a.png?raw=true "Changing diagonals")
+![Changing diagonals](../images/shapes_06b.png?raw=true "Changing diagonals")
+![Changing diagonals](../images/shapes_06c.png?raw=true "Changing diagonals")

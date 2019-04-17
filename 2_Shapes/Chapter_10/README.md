@@ -2,7 +2,11 @@
 
 # 10. Using slider and rotation of shapes in a grid
 
+In this sketch the shapes rotate to follow the mouse and using a slider the size and number of shapes changes.
+
 ## Step 1
+
+[Test](step01/)
 
 ```js
 'use strict';
@@ -47,6 +51,8 @@ function draw(){
 ```
 
 ## Step 2
+
+[Test](step02/)
 
 ```js
 'use strict';
@@ -99,6 +105,8 @@ function draw(){
 ```
 
 ## Step 3
+
+[Test](step03/)
 
 ```js
 'use strict';
@@ -160,6 +168,8 @@ function keyPressed() {
 }
 ```
 
-![](../images/shapes_10a.PNG?raw=true "")
-![](../images/shapes_10b.PNG?raw=true "")
-![](../images/shapes_10c.PNG?raw=true "")
+Results:
+
+![SVG slider](../images/shapes_10a.png?raw=true "SVG slider")
+![SVG slider](../images/shapes_10b.png?raw=true "SVG slider")
+![SVG slider](../images/shapes_10c.png?raw=true "SVG slider")

@@ -1,8 +1,12 @@
 [Shapes](../)
 
-# 4. Changing stroke weight and stroke caps in a grid
+# 4. Changing stroke weight and caps on diagonals in a grid
+
+In this sketch, lines are drawn diagonaly in a grid with a slant to the left or to the right, creating a maze.  The lines stroke changes with the mouse x and y position and the stroke cap can be changed using the keys 1, 2 or 3.
 
 ## Step 1
+
+[Test](step01/)
 
 ```js
 'use strict';
@@ -52,6 +56,8 @@ function draw(){
 
 ## Step 2
 
+[Test](step02/)
+
 ```js
 'use strict';
 
@@ -94,6 +100,8 @@ function draw(){
 ```
 
 ## Step 3
+
+[Test](step03/)
 
 ```js
 'use strict';
@@ -148,7 +156,9 @@ function keyPressed() {
 }
 ```
 
-![](../images/shapes_04a.png?raw=true "")
-![](../images/shapes_04b.PNG?raw=true "")
-![](../images/shapes_04c.PNG?raw=true "")
-![](../images/shapes_04d.PNG?raw=true "")
+Results:
+
+![Changing Stroke](../images/shapes_04a.png?raw=true "Changing Stroke")
+![Changing Stroke](../images/shapes_04b.png?raw=true "Changing Stroke")
+![Changing Stroke](../images/shapes_04c.png?raw=true "Changing Stroke")
+![Changing Stroke](../images/shapes_04d.png?raw=true "Changing Stroke")

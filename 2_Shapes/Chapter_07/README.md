@@ -2,7 +2,11 @@
 
 # 7. Shapes in a grid, that are always facing the mouse
 
+In this sketch the lines in the grid rotate so they follow the mouse. 
+
 ## Step 1
+
+[Test](step01/)
 
 ```js
 'use strict';
@@ -47,6 +51,8 @@ function draw(){
 ```
 
 ## Step 2
+
+[Test](step02/)
 
 ```js
 'use strict';
@@ -98,5 +104,7 @@ function keyPressed() {
 }
 ```
 
-![](../images/shapes_07a.PNG?raw=true "")
+Result:
+
+![Shape rotation](../images/shapes_07a.png?raw=true "Shape rotation")
 

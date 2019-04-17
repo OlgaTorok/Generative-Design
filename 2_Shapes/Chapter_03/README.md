@@ -1,8 +1,10 @@
 [Shapes](../)
 
-# 3. Drawing changing shapes using the mouse and colours
+# 3. Drawing changing shapes using colour and mouse drag
 
-This drawing is similar to the drawing in Chapter 2 with the ony difference being the colours added when using the keys 1, 2, 3 and 4.
+This sketch is similar to the sketch in Chapter 2 with the ony difference being the colours added when using the keys 1 to 4.
+
+[Test](step01/)
 
 ```js
 'use strict';
@@ -53,5 +55,7 @@ function keyPressed() {
 
 ```
 
-![](../images/shapes_03.png?raw=true "")
+Result:
+
+![Changing Shapes](../images/shapes_03.png?raw=true "Changing Shapes")
 

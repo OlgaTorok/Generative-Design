@@ -2,7 +2,11 @@
 
 # 8. Changing size and position of circles in a grid
 
+In this sketch, the circles in the grid are changing location and size depending on the mouse position.
+
 ## Step 1
+
+[Test](step01/)
 
 ```js
 'use strict';
@@ -34,6 +38,8 @@ function draw(){
 ```
 
 ## Step 2
+
+[Test](step02/)
 
 ```js
 'use strict';
@@ -77,6 +83,8 @@ function draw(){
 ```
 
 ## Step 3
+
+[Test](step03/)
 
 ```js
 'use strict';
@@ -134,7 +142,9 @@ function keyPressed() {
 }
 ```
 
-![](../images/shapes_08a.PNG?raw=true "")
-![](../images/shapes_08b.PNG?raw=true "")
-![](../images/shapes_08c.PNG?raw=true "")
-![](../images/shapes_08d.PNG?raw=true "")
+Results:
+
+![Circles](../images/shapes_08a.png?raw=true "Circles")
+![Circles](../images/shapes_08b.png?raw=true "Circles")
+![Circles](../images/shapes_08c.png?raw=true "Circles")
+![Circles](../images/shapes_08d.png?raw=true "Circles")

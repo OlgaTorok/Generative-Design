@@ -1,8 +1,12 @@
 [Shapes](../)
 
-# 2. Drawing changing shapes using the mouse
+# 2. Drawing changing shapes using mouse drag
+
+In this sketch vertexes are used to draw different sided shapes using the mouse drag.
 
 ## Step 1
+
+[Test](step01/)
 
 ```js
 'use strict';
@@ -30,6 +34,8 @@ function draw(){
 ```
 
 ## Step 2
+
+[Test](step02/)
 
 ```js
 'use strict';
@@ -64,6 +70,8 @@ function draw(){
 ```
 
 ## Step 3
+
+[Test](step03/)
 
 ```js
 'use strict';
@@ -108,5 +116,7 @@ function keyPressed() {
 }
 ```
 
-![](../images/shapes_02a.PNG?raw=true "")
-![](../images/shapes_02b.PNG?raw=true "")
+Results:
+
+![Changing shapes](../images/shapes_02a.png?raw=true "Changing shapes")
+![Changing shapes](../images/shapes_02b.png?raw=true "Changing shapes")

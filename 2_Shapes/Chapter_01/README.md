@@ -2,7 +2,11 @@
 
 # 1. Drawing a filled circle with lines
 
+In this example, lines are used to draw a circle using the mouse position.
+
 ## Step 1
+
+[Test](step01/)
 
 ```js
 'use strict';
@@ -26,6 +30,8 @@ function draw(){
 ```
 
 ## Step 2
+
+[Test](step02/)
 
 ```js
 'use strict';
@@ -66,6 +72,8 @@ function draw(){
 
 ## Step 3
 
+[Test](step03/)
+
 ```js
 'use strict';
 
@@ -103,15 +111,11 @@ function draw(){
 
 function keyPressed() {
     if (key == 's' || key == 'S') saveCanvas(gd.timestamp(), 'png');
-
 }
 ```
 
-Result:
+Results:
 
-Test the canvas [here](step03/)
-
-
-![](../images/shapes_01c.PNG?raw=true "")
-![](../images/shapes_01b.PNG?raw=true "")
-![](../images/shapes_01a.PNG?raw=true "")
+![Lines circle](../images/shapes_01c.png?raw=true "Lines circle")
+![Lines circle](../images/shapes_01b.png?raw=true "Lines circle")
+![Lines circle](../images/shapes_01a.png?raw=true "Lines circle")
