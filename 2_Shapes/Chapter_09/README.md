@@ -144,7 +144,5 @@ function keyPressed() {
 
 Results:
 
-![Circles](../images/shapes_08a.png?raw=true "Circles")
-![Circles](../images/shapes_08b.png?raw=true "Circles")
 ![Circles](../images/shapes_08c.png?raw=true "Circles")
 ![Circles](../images/shapes_08d.png?raw=true "Circles")
