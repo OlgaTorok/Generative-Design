@@ -9,8 +9,6 @@ P5.js application using font and gradient image. The text is added using an inpu
 - ``Font Size`` slider changes the size of the text in the canvas
 - ``Animation Stroke`` slider changes the stroke of the lines and it only works when the animation is checked. When the stroke is a higher number the trail of the lines is visible
 
-[Test](step01/)
-
 ```js
 'use strict';
 // Declare variables for text
